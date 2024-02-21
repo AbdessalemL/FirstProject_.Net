@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AM.applicationcore.Domain;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,15 @@ namespace AM.Infra
 {
     public class AMContext:DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public DbSet<Flight> Flights { get; set; }
+        public DbSet<Passenger> Passengers { get; set; }
+        public DbSet<Plane> Planes { get; set; }
+        public DbSet<Staff> Staffs{ get; set; }
+        public DbSet<Traveller> Travellers { get; set; }
+
+
+    //override void OnConfiguring
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=(localdb)\mssqllocaldb; 
 Initial Catalog=AirportManagement4SE2;Integrated Security=true");

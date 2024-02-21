@@ -38,7 +38,7 @@ namespace AM.applicationcore.Services
             //return query.ToList();
 
             //La methode Lamda
-            return flights.Where(f=>f.Destination == Destination).Select(a=>a.FlightDate).ToList();
+            //return flights.Where(f=>f.Destination == Destination).Select(a=>a.FlightDate).ToList();
 
             
 

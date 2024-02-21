@@ -39,6 +39,7 @@ namespace AM.applicationcore.Domain
 
 
         #region prop de base
+        public String airlineLogo { get; set; }
         public int Capacity { get; set; }
         public DateTime ManufactureDate { get; set; }
         public int Planeid { get; set; }
