@@ -22,7 +22,7 @@ namespace AM.applicationcore.Domain
         #region prop navigation
 
         [ForeignKey("PlaneFK")]
-        public Plane p { get; set; }
+        public Plane planes { get; set; }
         public IList<Passenger> passengers { get; set; }
 #endregion
     }

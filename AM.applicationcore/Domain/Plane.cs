@@ -51,7 +51,7 @@ namespace AM.applicationcore.Domain
 
         #endregion
         #region prop navigation
-        public IList<Flight> flights { get; set; }
+        public IList<Flight> Flights { get; set; }
 
         
         #endregion

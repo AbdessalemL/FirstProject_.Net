@@ -131,7 +131,7 @@ namespace AM.applicationcore.Services
         public void ShowFlightDetails(Plane plane)
         {
             //var query = from f in flights
-            //            where plane == f.p
+            //            where plane == f.planes
             //            select new { f.Destination, f.FlightDate };
             //foreach(var item in query)
             //{
@@ -141,7 +141,7 @@ namespace AM.applicationcore.Services
 
             //Lambda
 
-            var query = flights.Where(pp => plane == pp.p).Select(b => new { b.Destination, b.FlightDate });
+            var query = flights.Where(pp => plane == pp.planes).Select(b => new { b.Destination, b.FlightDate });
             //pp type : Flight
             //b: Flight respecte la condition precedente 
         }
