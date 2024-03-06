@@ -640,6 +640,9 @@
         }
       },
       "AM.applicationcore/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.13"
+        },
         "runtime": {
           "AM.applicationcore.dll": {}
         }

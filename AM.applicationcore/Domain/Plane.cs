@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,10 +42,13 @@ namespace AM.applicationcore.Domain
 
         #region prop de base
         public String airlineLogo { get; set; }
+
+        [Range(0, int.MaxValue)]
         public int Capacity { get; set; }
         public DateTime ManufactureDate { get; set; }
         public int Planeid { get; set; }
         public PlaneType PlaneType { get; set; }
+
         #endregion
         #region prop navigation
         public IList<Flight> flights { get; set; }

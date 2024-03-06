@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,8 +16,12 @@ namespace AM.applicationcore.Domain
         public DateTime EffectiveArrival { get; set; }
         public String Departure { get; set; }
         public String Destination { get; set; }
+        
+        public int PlaneFK { get; set; }
         #endregion
         #region prop navigation
+
+        [ForeignKey("PlaneFK")]
         public Plane p { get; set; }
         public IList<Passenger> passengers { get; set; }
 #endregion

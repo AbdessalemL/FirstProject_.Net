@@ -17,17 +17,26 @@ Plane plane2 = new Plane
 };
 Passenger passenger = new Passenger()
 {
-    LastName = "Abdo",
-    FirstName = "abdo",
+    fullName = new()
+    {
+        LastName = "Abdo",
+        FirstName = "abdo"
+    },
     EmailAddress = "abdessalem@gmail.com"
 };
 Staff staff = new Staff()
 {
-    FirstName = "lasswed"
+    fullName = new()
+    {
+        FirstName = "lasswed"
+    }
 };
 Traveller traveller = new Traveller()
 {
-    FirstName = "abdessalem"
+    fullName = new()
+    {
+        FirstName = "abdessalem"
+    }
 };
 Console.WriteLine("***************POLY PAR SIGNATURE***********");
 Console.WriteLine(passenger.CheckProfile("Abdo", "Abdo"));
